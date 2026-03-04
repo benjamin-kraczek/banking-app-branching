@@ -13,7 +13,14 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) {
-        balance -= amount;
+        if(amount <= balance)
+        {
+            balance -= amount;
+        }
+        else
+        {
+            System.out.println("Insufficient funds.");
+        }
     }
 
     public double getBalance() {
